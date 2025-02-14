@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Ammu ❤️</title>
+    <style>
+        body {
+            text-align: center;
+            background-image: url("skrrr.jpg");
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: 'Trebuchet MS', sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Prevents scrollbars */
+        }
+
+        #message {
+            font-size: 24px;
+            color: #800080;
+            margin-bottom: 20px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            position: absolute; /* Changed from relative */
+        }
+
+        #yesButton {
+            background: #800080;
+            color: #ffffff;
+            position: relative;
+        }
+
+        #noButton {
+            background: #ffffff;
+            color: #800080;
+            border: 2px solid #800080;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="message">can i be your valentine? 💌</div>
+    <div class="btn-container">
+        <a href="index.html">
+            <button class="btn" id="yesButton">Yes</button>
+        </a>
+        <button class="btn" id="noButton" onmouseover="moveButton()">No</button>
+    </div>
+
+    <script>
+        function moveButton() {
+            var button = document.getElementById('noButton');
+
+            // Get window width and height
+            var maxX = window.innerWidth - button.offsetWidth;
+            var maxY = window.innerHeight - button.offsetHeight;
+
+            // Generate random positions
+            var x = Math.random() * maxX;
+            var y = Math.random() * maxY;
+
+            // Move the button
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
+
+</body>
+
+</html>
